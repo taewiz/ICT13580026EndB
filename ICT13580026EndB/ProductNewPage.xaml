@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	x:Class="ICT13580026EndB.ProductNewPage">
+     <Grid>
+        <Image
+            Source="https://i.pinimg.com/736x/cd/b7/37/cdb737da7586dfb3021a277d0b8c1786--iphone--wallpaper-wallpaper-ideas.jpg"
+            Aspect="Fill"/>
+        <ScrollView>
+            <Frame
+                Margin="30"
+                CornerRadius="20"
+                BackgroundColor="#B0FFFFFF"
+                VerticalOptions="Start">
+                <StackLayout
+                    Orientation="Vertical">
+                    <Label
+                        x:Name="titleLabel"
+                        Text="เพิ่มรถใหม่"
+                        HorizontalTextAlignment="Center"
+                        FontSize="20"
+                        FontAttributes="Bold" />
+                    <Label
+                        Text="ประเภทรถ"
+                        TextColor="Black"
+                        FontSize="14"/>
+                    <Picker
+                        x:Name="kindPicker"
+                        Title="เลือกประเภทรถ"
+                        BackgroundColor="#B0FFFFFF"/>
+                    
+                    <Label
+                        Text="ยี่ห้อ"
+                        TextColor="#008699"
+                        FontSize="14"/>
+                    <Picker
+                        x:Name="brandPicker"
+                        Title="เลือกยีห้อรถ"
+                        BackgroundColor="#B0FFFFFF"/>
+                    <Label
+                        Text="รุ่น"
+                        TextColor="#008699"
+                        FontSize="14"/>
+                    <Entry
+                        x:Name="VersionEntry"
+                        Placeholder="รุ่น"
+                        BackgroundColor="#B0FFFFFF"
+                        Keyboard="Numeric"/>
+                    <Label
+                        Text="ปี"
+                        TextColor="#008699"
+                        FontSize="14"/>
+                    <Entry
+                        x:Name="yearEntry"
+                        Placeholder="ปี"
+                        BackgroundColor="#B0FFFFFF"/>
+
+                    <Label
+                        Text="เลขไมล์"
+                        TextColor="#008699"
+                        FontSize="14"/>
+                    <Entry
+                        x:Name="mileEntry"
+                        Placeholder="เลขไมล์"
+                        BackgroundColor="#B0FFFFFF"/>
+                    
+                    <Label
+                        Text="สี"
+                        TextColor="#008699"
+                        FontSize="14" />
+                    <Picker
+                        x:Name="ColorPicker"
+                        Title="สี"
+                        BackgroundColor="#B0FFFFFF"/>
+
+                         <Label
+                        Text="รถดีลเลอร์"
+                        TextColor="#008699"
+                        FontSize="14" />
+                        <Switch
+                        x:Name="dealerSwitch"
+                        IsToggled="true" />
+                    
+                    <Label
+                        Text="เบอร์โทร"
+                        TextColor="#008699"
+                        FontSize="14"/>
+                    <Entry
+                        x:Name="PhoneEntry"
+                        Placeholder="เบอร์โทร"
+                        BackgroundColor="#B0FFFFFF"
+                        Keyboard="Numeric"/>
+                    <Label
+                        Text="ราคา"
+                        TextColor="#008699"
+                        FontSize="14"/>
+                    <Entry
+                        x:Name="PriceEntry"
+                        Placeholder="ราคา"
+                        BackgroundColor="#B0FFFFFF"
+                        Keyboard="Email"/>
+                    
+                    <Label
+                        Text="รายละเอียด"
+                        TextColor="#008699"
+                        FontSize="14"/>
+                    <Editor
+                        x:Name="DetailEditor"
+                        HeightRequest="100"
+                        BackgroundColor="#B0FFFFFF"/>
+                    
+                    <Label
+                        Text="จังหวัด"
+                        TextColor="#008699"
+                        FontSize="14" />
+                    <Picker
+                        x:Name="ProvincePicker"
+                        Title="จังหวัด"
+                        BackgroundColor="#B0FFFFFF"/>
+                   
+                    <Grid
+                        Margin="0,10,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Button
+                            x:Name="cancelButton"
+                            Text="ยกเลิก"
+                            TextColor="White"
+                            BackgroundColor="Red"/>
+                        <Button
+                            x:Name="saveButton"
+                            Text="บันทึก"
+                            TextColor="White"
+                            BackgroundColor="Green"
+                            Grid.Column="1"/>
+                    </Grid>
+                </StackLayout>
+            </Frame>
+        </ScrollView>
+    </Grid>
+</ContentPage>
+

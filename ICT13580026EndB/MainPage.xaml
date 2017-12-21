@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ICT13580026EndB.MainPage"
+    Title="Main Page">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Text="New"
+            x:Name="newButton" />
+    </ContentPage.ToolbarItems>
+    <ListView
+        x:Name="productListView"
+        RowHeight="300">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <ViewCell.ContextActions>
+                        <MenuItem
+                            Text="Edit"
+                            CommandParameter="{Binding .}"
+                            Clicked="Edit_Clicked" />
+                        <MenuItem
+                            Text="Delete"
+                            CommandParameter="{Binding .}"
+                            IsDestructive="true"
+                            Clicked="Delete_Clicked" />
+                    </ViewCell.ContextActions>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition
+                                Width="100" />
+                            <ColumnDefinition />
+                            <ColumnDefinition
+                                Width="50" />
+                        </Grid.ColumnDefinitions>
+                        <Image
+                            BackgroundColor="Silver"
+                            HeightRequest="200"
+                            Source="https://d30y9cdsu7xlg0.cloudfront.net/png/996-200.png" />
+                        <StackLayout
+                            Grid.Column="1">
+                            <Label
+                                Text="{Binding Kind}"
+                                FontAttributes="Bold"
+                                TextColor="Navy" />
+                            <Label
+                                Text="{Binding Brand}"
+                                FontAttributes="Bold"
+                                TextColor="Navy" />
+                            <Label
+                                Text="{Binding Version ,StringFormat = 'รุ่น {0} '}" />
+                            <Label
+                                Text="{Binding Year ,StringFormat = 'ปี {0} '}" />
+                            <Label
+                                Text="{Binding Mile ,StringFormat = 'เลขไมล์ {0} '}" />
+
+
+                            
+                            <Label
+                                Text="{Binding Color}"
+                                FontAttributes="Bold"
+                                TextColor="Navy" />
+
+                             <Label
+                                Text="{Binding Dealer}"
+                                FontAttributes="Bold"
+                                TextColor="Navy" />
+
+                            <Label
+                                Text="{Binding Phone ,StringFormat = 'เบอร์ {0} '}" />
+
+                            <Label
+                                Text="{Binding Price ,StringFormat = 'เบอร์ {0} '}" />
+
+                             <Label
+                                Text="{Binding Detail}"
+                                FontAttributes="Bold"
+                                TextColor="Navy" />
+
+                            <Label
+                                Text="{Binding Province}"
+                                FontAttributes="Bold"
+                                TextColor="Navy" />
+
+
+                           
+                        </StackLayout>
+                        <Button
+                            Text="+"
+                            FontSize="30"
+                            Grid.Column="2"
+                            Margin="5"
+                            BackgroundColor="Silver"
+                            VerticalOptions="End"
+                            HeightRequest="50" />
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>
